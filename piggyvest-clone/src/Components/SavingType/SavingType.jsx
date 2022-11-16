@@ -1,0 +1,21 @@
+import React from "react";
+import "./SavingType.css";
+import { Link } from "react-router-dom";
+
+const SavingType = ({ ImageName, Header, Content, SvgName, BankType }) => {
+  return (
+    <div className="saving-type">
+      <Link to="/">
+        <img src={ImageName} alt={"saving-icon"} />
+        <h5>{Header}</h5>
+        <p>{Content}</p>
+        <div className="sub-title">
+          <img src={SvgName} alt={"saving-next"} />
+          {BankType}
+        </div>
+      </Link>
+    </div>
+  );
+};
+
+export default SavingType;
